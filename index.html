@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบรับสมัครนักศึกษาใหม่ | มจพ.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <div class="logo"><img src="kmutnb.png" alt="ตรามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"></div>
+        <div>
+          <strong>ระบบรับสมัครนักศึกษาใหม่</strong>
+          <span>King Mongkut's University of Technology North</span>
+        </div>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="เปิดเมนู">☰</button>
+      <nav id="navMenu">
+        <a href="#home">หน้าหลัก</a>
+        <a href="#programs">หลักสูตร</a>
+        <a href="#steps">ขั้นตอนสมัคร</a>
+        <a href="#news">ข่าวสาร</a>
+        <a class="login-link" href="#login">เข้าสู่ระบบ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">ADMISSION 2026</p>
+          <h1>เปิดรับสมัคร<br><span>นักศึกษาใหม่</span></h1>
+          <p class="lead">เริ่มต้นอนาคตของคุณกับมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ สมัครเรียนได้ง่าย รวดเร็ว และติดตามสถานะการสมัครได้ในที่เดียว</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#programs">ดูหลักสูตรที่เปิดรับ</a>
+            <a class="btn btn-outline" href="#steps">วิธีสมัครเรียน</a>
+          </div>
+          <div class="stats">
+            <div><strong>50+</strong><span>หลักสูตร</span></div>
+            <div><strong>3</strong><span>วิทยาเขต</span></div>
+            <div><strong>24/7</strong><span>สมัครออนไลน์</span></div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="badge">กำลังเปิดรับสมัคร</div>
+          <h2>รอบที่ 1<br>Portfolio</h2>
+          <p>เปิดรับสมัครวันนี้ - 30 พฤศจิกายน 2569</p>
+          <div class="countdown">
+            <div><b id="days">--</b><span>วัน</span></div>
+            <div><b id="hours">--</b><span>ชม.</span></div>
+            <div><b id="minutes">--</b><span>นาที</span></div>
+          </div>
+          <a href="#apply" class="btn btn-light">สมัครเรียนตอนนี้ →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-section" id="apply">
+      <div class="container quick-grid">
+        <a class="quick-card" href="#programs"><span class="icon">🎓</span><div><b>สมัครเรียน</b><small>เลือกหลักสูตรและยื่นใบสมัคร</small></div><span>→</span></a>
+        <a class="quick-card" href="#login"><span class="icon">🔎</span><div><b>ตรวจสอบสถานะ</b><small>ติดตามผลการสมัครของคุณ</small></div><span>→</span></a>
+        <a class="quick-card" href="#news"><span class="icon">📅</span><div><b>ปฏิทินการรับสมัคร</b><small>ดูวันสำคัญและกำหนดการ</small></div><span>→</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="programs">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">EXPLORE PROGRAMS</p><h2>ค้นหาหลักสูตรที่ใช่สำหรับคุณ</h2></div>
+          <p>เลือกคณะและระดับการศึกษาที่ตรงกับความสนใจของคุณ</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" data-filter="all">ทั้งหมด</button>
+          <button class="filter" data-filter="engineering">วิศวกรรมศาสตร์</button>
+          <button class="filter" data-filter="technology">เทคโนโลยี</button>
+          <button class="filter" data-filter="business">บริหารธุรกิจ</button>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card" data-category="engineering">
+            <div class="program-icon">⚙️</div><span>วิศวกรรมศาสตร์</span>
+            <h3>วิศวกรรมคอมพิวเตอร์</h3><p>พัฒนาทักษะด้านซอฟต์แวร์ ระบบคอมพิวเตอร์ และเทคโนโลยีอัจฉริยะ</p>
+            <a href="#apply">รายละเอียดหลักสูตร →</a>
+          </article>
+          <article class="program-card" data-category="technology">
+            <div class="program-icon">💻</div><span>เทคโนโลยี</span>
+            <h3>เทคโนโลยีสารสนเทศ</h3><p>เรียนรู้การจัดการข้อมูล ระบบเครือข่าย และการพัฒนาเทคโนโลยีดิจิทัล</p>
+            <a href="#apply">รายละเอียดหลักสูตร →</a>
+          </article>
+          <article class="program-card" data-category="business">
+            <div class="program-icon">📊</div><span>บริหารธุรกิจ</span>
+            <h3>บริหารธุรกิจ</h3><p>สร้างพื้นฐานด้านการบริหาร การตลาด และการเป็นผู้ประกอบการยุคใหม่</p>
+            <a href="#apply">รายละเอียดหลักสูตร →</a>
+          </article>
+          <article class="program-card" data-category="engineering">
+            <div class="program-icon">🏗️</div><span>วิศวกรรมศาสตร์</span>
+            <h3>วิศวกรรมโยธา</h3><p>ออกแบบและพัฒนาโครงสร้างพื้นฐานเพื่อการพัฒนาอย่างยั่งยืน</p>
+            <a href="#apply">รายละเอียดหลักสูตร →</a>
+          </article>
+          <article class="program-card" data-category="technology">
+            <div class="program-icon">🤖</div><span>เทคโนโลยี</span>
+            <h3>เทคโนโลยีปัญญาประดิษฐ์</h3><p>ก้าวสู่โลก AI, Data และระบบอัตโนมัติสำหรับอนาคต</p>
+            <a href="#apply">รายละเอียดหลักสูตร →</a>
+          </article>
+          <article class="program-card" data-category="business">
+            <div class="program-icon">💡</div><span>บริหารธุรกิจ</span>
+            <h3>นวัตกรรมและผู้ประกอบการ</h3><p>เปลี่ยนไอเดียให้เป็นธุรกิจด้วยความคิดสร้างสรรค์และนวัตกรรม</p>
+            <a href="#apply">รายละเอียดหลักสูตร →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="application-section" id="apply">
+      <div class="container">
+        <div class="section-heading center">
+          <div>
+            <p class="eyebrow">ONLINE APPLICATION</p>
+            <h2>แบบฟอร์มสมัครเรียนออนไลน์</h2>
+            <p class="form-intro">กรอกข้อมูลตามขั้นตอนให้ครบถ้วน แล้วกดส่งใบสมัคร</p>
+          </div>
+        </div>
+
+        <div class="application-box">
+          <div class="progressbar">
+            <div class="progress-step active"><span>1</span><b>ข้อมูลส่วนตัว</b></div>
+            <div class="progress-line"></div>
+            <div class="progress-step"><span>2</span><b>ข้อมูลการศึกษา</b></div>
+            <div class="progress-line"></div>
+            <div class="progress-step"><span>3</span><b>เลือกหลักสูตร</b></div>
+            <div class="progress-line"></div>
+            <div class="progress-step"><span>4</span><b>ยืนยันข้อมูล</b></div>
+          </div>
+
+          <form id="applicationForm">
+            <!-- STEP 1 -->
+            <div class="form-step active">
+              <h3>ข้อมูลส่วนตัว</h3>
+              <div class="form-grid">
+                <div class="field">
+                  <label>คำนำหน้า *</label>
+                  <select required>
+                    <option value="">-- เลือก --</option>
+                    <option>นาย</option><option>นางสาว</option><option>นาง</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>ชื่อ *</label>
+                  <input type="text" placeholder="กรอกชื่อ" required>
+                </div>
+                <div class="field">
+                  <label>นามสกุล *</label>
+                  <input type="text" placeholder="กรอกนามสกุล" required>
+                </div>
+                <div class="field">
+                  <label>เลขบัตรประชาชน *</label>
+                  <input type="text" maxlength="13" placeholder="ตัวเลข 13 หลัก" required>
+                </div>
+                <div class="field">
+                  <label>วันเกิด *</label>
+                  <input type="date" required>
+                </div>
+                <div class="field">
+                  <label>เบอร์โทรศัพท์ *</label>
+                  <input type="tel" placeholder="08xxxxxxxx" required>
+                </div>
+                <div class="field full">
+                  <label>อีเมล *</label>
+                  <input type="email" placeholder="example@email.com" required>
+                </div>
+                <div class="field full">
+                  <label>ที่อยู่ปัจจุบัน *</label>
+                  <textarea rows="3" placeholder="บ้านเลขที่ / ถนน / ตำบล / อำเภอ / จังหวัด / รหัสไปรษณีย์" required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="form-step">
+              <h3>ข้อมูลการศึกษา</h3>
+              <div class="form-grid">
+                <div class="field full">
+                  <label>ชื่อสถานศึกษาเดิม *</label>
+                  <input type="text" placeholder="เช่น โรงเรียน..." required>
+                </div>
+                <div class="field">
+                  <label>ระดับการศึกษา *</label>
+                  <select required>
+                    <option value="">-- เลือก --</option>
+                    <option>มัธยมศึกษาตอนปลาย</option>
+                    <option>ปวช.</option>
+                    <option>ปวส.</option>
+                    <option>ปริญญาตรี</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>แผนการเรียน / สาขา *</label>
+                  <input type="text" placeholder="เช่น วิทย์-คณิต" required>
+                </div>
+                <div class="field">
+                  <label>เกรดเฉลี่ยสะสม (GPAX) *</label>
+                  <input type="number" min="0" max="4" step="0.01" placeholder="เช่น 3.25" required>
+                </div>
+                <div class="field">
+                  <label>ปีที่สำเร็จการศึกษา *</label>
+                  <input type="number" min="2500" max="2700" placeholder="เช่น 2569" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="form-step">
+              <h3>เลือกหลักสูตรที่ต้องการสมัคร</h3>
+              <div class="form-grid">
+                <div class="field full">
+                  <label>คณะที่สนใจ *</label>
+                  <select required>
+                    <option value="">-- เลือกคณะ --</option>
+                    <option>คณะวิศวกรรมศาสตร์</option>
+                    <option>คณะเทคโนโลยีสารสนเทศ</option>
+                    <option>คณะบริหารธุรกิจ</option>
+                    <option>คณะวิทยาศาสตร์ประยุกต์</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label>หลักสูตร / สาขาวิชา *</label>
+                  <select required>
+                    <option value="">-- เลือกหลักสูตร --</option>
+                    <option>วิศวกรรมคอมพิวเตอร์</option>
+                    <option>เทคโนโลยีสารสนเทศ</option>
+                    <option>เทคโนโลยีปัญญาประดิษฐ์</option>
+                    <option>บริหารธุรกิจ</option>
+                    <option>วิศวกรรมโยธา</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label>เหตุผลที่ต้องการสมัคร</label>
+                  <textarea rows="5" placeholder="บอกเหตุผลหรือความสนใจของคุณ"></textarea>
+                </div>
+                <div class="field full">
+                  <label>เอกสารประกอบการสมัคร (ตัวอย่าง UI)</label>
+                  <input type="file" accept=".pdf,.jpg,.jpeg,.png">
+                  <small>รองรับไฟล์ PDF, JPG และ PNG</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="form-step">
+              <h3>ตรวจสอบและยืนยันข้อมูล</h3>
+              <div class="confirm-box">
+                <div class="confirm-icon">✓</div>
+                <h4>เกือบเสร็จแล้ว!</h4>
+                <p>กรุณาตรวจสอบข้อมูลที่กรอกให้ถูกต้องก่อนส่งใบสมัคร</p>
+              </div>
+              <label class="check-label">
+                <input type="checkbox" id="agreeCheck" required>
+                <span>ข้าพเจ้ารับรองว่าข้อมูลที่กรอกเป็นความจริง และยอมรับเงื่อนไขการสมัครเรียน *</span>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-form secondary" id="prevBtn">← ย้อนกลับ</button>
+              <span id="stepText">ขั้นตอนที่ 1 จาก 4</span>
+              <button type="button" class="btn-form primary" id="nextBtn">ถัดไป →</button>
+              <button type="submit" class="btn-form submit" id="submitBtn">✓ ส่งใบสมัคร</button>
+            </div>
+          </form>
+
+          <div class="success-message" id="successMessage">
+            <div class="success-circle">✓</div>
+            <h3>ส่งใบสมัครเรียบร้อยแล้ว!</h3>
+            <p>ระบบได้รับข้อมูลการสมัครของคุณเรียบร้อย กรุณารอติดตามประกาศผลการสมัคร</p>
+            <button class="btn-form primary" id="restartBtn">สมัครใหม่อีกครั้ง</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section" id="steps">
+      <div class="container">
+        <div class="section-heading center">
+          <div><p class="eyebrow">HOW TO APPLY</p><h2>4 ขั้นตอนง่าย ๆ ในการสมัครเรียน</h2></div>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="step-no">1</div><h3>สร้างบัญชีผู้ใช้</h3><p>ลงทะเบียนด้วยอีเมลและข้อมูลพื้นฐาน</p></div>
+          <div class="step"><div class="step-no">2</div><h3>เลือกหลักสูตร</h3><p>ค้นหาและเลือกหลักสูตรที่สนใจ</p></div>
+          <div class="step"><div class="step-no">3</div><h3>กรอกใบสมัคร</h3><p>กรอกข้อมูลและอัปโหลดเอกสาร</p></div>
+          <div class="step"><div class="step-no">4</div><h3>ติดตามผล</h3><p>ตรวจสอบสถานะและประกาศผลออนไลน์</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section news" id="news">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">LATEST NEWS</p><h2>ข่าวสารและประกาศ</h2></div><a href="#news" class="text-link">ดูข่าวทั้งหมด →</a></div>
+        <div class="news-grid">
+          <article><div class="news-date">15 ก.ย. 2569</div><h3>ประกาศกำหนดการรับสมัครนักศึกษาใหม่ ประจำปีการศึกษา 2570</h3><p>ตรวจสอบรายละเอียดรอบการสมัครและคุณสมบัติของผู้สมัคร</p></article>
+          <article><div class="news-date">10 ก.ย. 2569</div><h3>แนวทางการจัดเตรียม Portfolio สำหรับผู้สมัครรอบที่ 1</h3><p>คำแนะนำและตัวอย่างการจัดทำแฟ้มสะสมผลงาน</p></article>
+          <article><div class="news-date">05 ก.ย. 2569</div><h3>เปิดระบบทดลองใช้งานสำหรับผู้สมัครใหม่</h3><p>ผู้สมัครสามารถสร้างบัญชีและตรวจสอบข้อมูลเบื้องต้นได้แล้ว</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="login">
+      <div class="container">
+        <div><p class="eyebrow">READY TO START?</p><h2>อนาคตของคุณ เริ่มต้นได้วันนี้</h2><p>สมัครเรียนออนไลน์และก้าวสู่เส้นทางการเรียนรู้ที่คุณเลือก</p></div>
+        <a href="#apply" class="btn btn-light">เข้าสู่ระบบสมัครเรียน</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><div class="footer-brand">มจพ.</div><p>ระบบรับสมัครนักศึกษาใหม่<br>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p></div>
+      <div><h4>ติดต่อเรา</h4><p>สำนักงานรับสมัครนักศึกษา<br>โทร. 0-2555-2000<br>อีเมล: admission@kmutnb.ac.th</p></div>
+      <div><h4>เมนูด่วน</h4><a href="#programs">หลักสูตรที่เปิดรับ</a><a href="#steps">ขั้นตอนสมัคร</a><a href="#news">ข่าวสาร</a></div>
+    </div>
+    <div class="copyright">© 2026 Student Admission Website — Assignment Term Project</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

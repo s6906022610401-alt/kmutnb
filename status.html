@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สถานะการสมัคร | ระบบรับสมัครนักศึกษาใหม่</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-protected="true" class="account-page">
+  <header class="account-top">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo"><img src="kmutnb.png" alt=""></div>
+        <div><strong>ระบบรับสมัครนักศึกษาใหม่ มจพ.</strong><span>Application Status</span></div>
+      </a>
+      <div class="user-chip"><span class="user-avatar">👤</span><span data-user-name>ผู้สมัคร</span><button
+          class="logout-btn">ออกจากระบบ</button></div>
+    </div>
+  </header>
+  <main class="account-shell">
+    <a class="back-home" href="dashboard.html">← กลับศูนย์ข้อมูลผู้สมัคร</a>
+    <div class="status-banner">
+      <p class="eyebrow">APPLICATION STATUS</p>
+      <h2>สถานะการสมัครของ <span data-user-name>ผู้สมัคร</span></h2>
+      <p>เลขบัตรประชาชน: <span data-user-id>-</span></p>
+    </div>
+
+    <section class="account-card my-applications-card">
+      <div class="status-section-head">
+        <div>
+          <p class="eyebrow">MY APPLICATIONS</p>
+          <h2>สมัครอะไรไปบ้าง</h2>
+        </div><span class="mini-live">LIVE</span>
+      </div>
+      <div id="myApplications">
+        <div class="empty-application">ยังไม่มีรายการสมัคร <a href="home_logged.html#apply">เริ่มสมัครเรียน →</a></div>
+      </div>
+    </section>
+
+    <section class="account-card">
+      <h2 class="account-title">รายการดำเนินการ</h2>
+      <div class="table-scroll">
+        <table class="status-table">
+          <thead>
+            <tr>
+              <th>รายการ</th>
+              <th>สถานะ</th>
+              <th>รายละเอียด</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>สร้างบัญชีผู้สมัคร</td>
+              <td><span class="badge green">เสร็จแล้ว</span></td>
+              <td>บัญชีพร้อมใช้งาน</td>
+            </tr>
+            <tr>
+              <td>กรอกใบสมัคร</td>
+              <td id="applicationStatus"><span class="badge yellow">รอดำเนินการ</span></td>
+              <td>กรอกและยืนยันใบสมัคร</td>
+            </tr>
+            <tr>
+              <td>เอกสารประกอบ</td>
+              <td id="documentStatus"><span class="badge blue">รอตรวจสอบ</span></td>
+              <td>ตรวจสอบหลังส่งใบสมัคร</td>
+            </tr>
+            <tr>
+              <td>การชำระค่าธรรมเนียม</td>
+              <td id="paymentStatus"><span class="badge yellow">รอดำเนินการ</span></td>
+              <td>พิมพ์ใบแจ้งชำระและดำเนินการชำระค่าธรรมเนียม</td>
+            </tr>
+            <tr>
+              <td>ผลการสมัคร</td>
+              <td><span class="badge gray">ยังไม่มีผล</span></td>
+              <td>ติดตามตามกำหนดการ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <section class="account-card payment-card" id="payment">
+      <div class="status-section-head">
+        <div>
+          <p class="eyebrow">PAYMENT CENTER</p>
+          <h2>การชำระค่าธรรมเนียมสมัครเรียน</h2>
+        </div><span id="paymentLive" class="mini-live">รอชำระ</span>
+      </div>
+      <p class="payment-intro">หลังส่งใบสมัคร ผู้สมัครสามารถพิมพ์ใบแจ้งชำระ ตรวจสอบสถานะการชำระ
+        และพิมพ์หลักฐานแสดงการสมัครได้จากหน้านี้</p>
+      <div class="payment-summary">
+        <div><span>รายการ</span><b>ค่าธรรมเนียมสมัครเรียน</b></div>
+        <div><span>ยอดชำระ</span><b id="paymentAmount">300.00 บาท</b></div>
+        <div><span>สถานะ</span><b id="paymentSummaryStatus">รอชำระเงิน</b></div>
+      </div>
+      <div class="payment-steps">
+        <div class="payment-step" id="billStep"><span>1</span>
+          <div><b>ใบแจ้งชำระเงิน</b><small>สร้างและพิมพ์ใบแจ้งชำระ</small></div>
+        </div>
+        <div class="payment-step" id="payStep"><span>2</span>
+          <div><b>ชำระค่าธรรมเนียม</b><small>จำลองการยืนยันการชำระเงินในระบบ</small></div>
+        </div>
+        <div class="payment-step" id="receiptStep"><span>3</span>
+          <div><b>หลักฐานการสมัคร</b><small>พิมพ์หลังชำระเงินสำเร็จ</small></div>
+        </div>
+      </div>
+      <div class="payment-actions">
+        <button type="button" class="btn btn-outline blue-outline" id="printPaymentBill">🧾 พิมพ์ใบแจ้งชำระเงิน</button>
+        <button type="button" class="btn btn-primary" id="confirmPayment">💳 ยืนยันการชำระเงิน</button>
+        <button type="button" class="btn status-search-btn" id="printApplicationReceipt" disabled>📄
+          พิมพ์หลักฐานแสดงการสมัคร</button>
+      </div>
+      <div id="paymentNotice" class="payment-notice">ยังไม่มีใบสมัครที่ส่งเข้าระบบ กรุณาสมัครเรียนก่อน</div>
+    </section>
+
+    <section class="account-card status-guide-card">
+      <div class="status-section-head">
+        <div>
+          <p class="eyebrow">STATUS GUIDE</p>
+          <h2>ความหมายของสถานะ</h2>
+        </div>
+      </div>
+      <div class="status-guide-grid">
+        <div><span class="guide-dot green-dot">●</span><b>เสร็จแล้ว</b>
+          <p>ดำเนินการในขั้นตอนนี้เรียบร้อยแล้ว</p>
+        </div>
+        <div><span class="guide-dot yellow-dot">●</span><b>รอดำเนินการ</b>
+          <p>ยังไม่เสร็จ หรือผู้สมัครอาจต้องดำเนินการต่อ</p>
+        </div>
+        <div><span class="guide-dot blue-dot">●</span><b>รอตรวจสอบ</b>
+          <p>ส่งข้อมูลแล้วและกำลังรอเจ้าหน้าที่ตรวจสอบ</p>
+        </div>
+        <div><span class="guide-dot gray-dot">●</span><b>ยังไม่มีผล</b>
+          <p>มหาวิทยาลัยยังไม่ได้ประกาศผลในขั้นตอนนี้</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="account-card documents-card">
+      <div class="status-section-head">
+        <div>
+          <p class="eyebrow">DOCUMENT CENTER</p>
+          <h2>เอกสารประกอบการสมัคร</h2>
+        </div>
+      </div>
+      <div id="documentList" class="document-list">
+        <div class="document-row" data-document="citizen"><span>📄 สำเนาบัตรประชาชน</span><span
+            class="doc-badge pending">รอตรวจสอบ</span><button type="button"
+            class="document-upload-btn">อัปโหลด</button><input class="document-file-input" type="file"
+            accept=".pdf,.png,.jpg,.jpeg,application/pdf,image/png,image/jpeg" hidden></div>
+        <div class="document-row" data-document="transcript"><span>📑 Transcript / ใบแสดงผลการเรียน</span><span
+            class="doc-badge pending">รอตรวจสอบ</span><button type="button"
+            class="document-upload-btn">อัปโหลด</button><input class="document-file-input" type="file"
+            accept=".pdf,.png,.jpg,.jpeg,application/pdf,image/png,image/jpeg" hidden></div>
+        <div class="document-row" data-document="portfolio"><span>🗂️ Portfolio / เอกสารเพิ่มเติม</span><span
+            class="doc-badge edit">ต้องแก้ไข</span><button type="button"
+            class="document-upload-btn">อัปโหลดใหม่</button><input class="document-file-input" type="file"
+            accept=".pdf,.png,.jpg,.jpeg,application/pdf,image/png,image/jpeg" hidden></div>
+      </div>
+    </section>
+    <div class="status-actions"><a class="btn btn-primary" href="home_logged.html#apply">ไปหน้าสมัครเรียน →</a><a
+        class="btn status-search-btn" href="index.html#programs">ค้นหาหลักสูตร</a></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

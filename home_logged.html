@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-protected="true" data-home-logged="true">
 
   <header class="topbar">
     <div class="container topbar-mini">
@@ -33,8 +33,8 @@
         <a href="#rounds">รอบรับสมัคร</a>
         <a href="#steps">ขั้นตอน</a>
         <a href="#news">ประกาศ</a>
-        <a href="#campus">วิทยาเขต</a>
-        <a class="login-link" href="login.html">เข้าสู่ระบบ</a>
+        <div class="user-chip"><span>ผู้สมัคร: </span><span data-user-name>ผู้สมัคร</span><button class="logout-btn"
+            type="button">ออกจากระบบ</button></div>
       </nav>
     </div>
   </header>
@@ -435,7 +435,10 @@
             <div class="success-circle">✓</div>
             <h3>ส่งใบสมัครเรียบร้อยแล้ว!</h3>
             <p>ระบบได้รับข้อมูลการสมัครของคุณเรียบร้อย</p>
-            <button class="btn-form primary" id="restartBtn">สมัครใหม่อีกครั้ง</button>
+            <div class="success-actions">
+              <a class="btn-form primary" href="status.html#payment">💳 ไปหน้าชำระเงิน</a>
+              <button class="btn-form secondary" id="restartBtn">สมัครใหม่อีกครั้ง</button>
+            </div>
           </div>
         </div>
       </div>
@@ -471,16 +474,7 @@
       </div>
     </section>
 
-    <section class="section applicant-section" id="status">
-      <div class="container applicant-grid">
-        <div>
-          <p class="eyebrow">APPLICANT</p>
-          <h2 id="applicantTitle">สำหรับผู้สมัครที่มีบัญชีแล้ว</h2>
-          <p id="applicantMessage">เข้าสู่ศูนย์ข้อมูลเพื่อดูใบสมัครล่าสุด เอกสารที่ต้องแก้ไข และสถานะการสมัคร</p>
-        </div>
-        <div class="applicant-actions" id="applicantActions"></div>
-      </div>
-    </section>
+
 
     <section class="section dates-section" id="dates">
       <div class="container">
@@ -582,7 +576,7 @@
           if (!loggedIn) {
             e.preventDefault();
             alert("กรุณาเข้าสู่ระบบก่อนสมัครเรียน");
-            window.location.href = "login.html?redirect=" + encodeURIComponent("home_logged.html#apply");
+            window.location.href = "login.html?redirect=" + encodeURIComponent(this.getAttribute("href"));
           }
         });
       });

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สร้างบัญชี | ระบบรับสมัครนักศึกษาใหม่</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="account-page">
+    <header class="account-top">
+        <div class="container nav">
+            <a class="brand" href="index.html">
+                <div class="logo"><img src="kmutnb.png" alt=""></div>
+                <div><strong>ระบบรับสมัครนักศึกษาใหม่ มจพ.</strong><span>Applicant System</span></div>
+            </a>
+            <a class="btn btn-outline" href="index.html" style="color:var(--blue);border-color:#d6dee9">กลับหน้าหลัก</a>
+        </div>
+    </header>
+    <main class="account-shell">
+        <section class="account-card narrow">
+            <div class="account-head">
+                <p class="eyebrow">CREATE ACCOUNT</p>
+                <h1>สร้างบัญชีผู้สมัคร</h1>
+                <p>สร้างบัญชีก่อนเริ่มกรอกใบสมัครเรียน</p>
+            </div>
+            <form id="registerForm" class="account-form">
+                <div class="field"><label>เลขบัตรประชาชน *</label><input id="regCitizenId" type="text" maxlength="13"
+                        minlength="13" inputmode="numeric" pattern="[0-9]{13}" placeholder="ตัวเลข 13 หลัก" required>
+                </div>
+                <div class="field"><label>ชื่อ–นามสกุล *</label><input id="regName" type="text"
+                        placeholder="ชื่อ นามสกุล" required></div>
+                <div class="field"><label>อีเมล *</label><input id="regEmail" type="email"
+                        placeholder="example@email.com" required></div>
+                <div class="field"><label>เบอร์โทรศัพท์ *</label><input id="regPhone" type="tel" maxlength="10"
+                        pattern="[0-9]{10}" inputmode="numeric" placeholder="08xxxxxxxx" required></div>
+                <div class="field"><label>รหัสผ่าน *</label><input id="regPassword" type="password" minlength="6"
+                        placeholder="อย่างน้อย 6 ตัวอักษร" required></div>
+                <div class="field"><label>ยืนยันรหัสผ่าน *</label><input id="regConfirm" type="password" minlength="6"
+                        placeholder="กรอกรหัสผ่านอีกครั้ง" required></div>
+                <div id="registerMessage" class="account-message"></div>
+                <button class="account-submit gold" type="submit">สร้างบัญชี</button>
+            </form>
+            <div class="account-links">มีบัญชีแล้ว? <a href="login.html">เข้าสู่ระบบ</a></div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("input", function (e) { if (e.target.id === "regCitizenId") { e.target.value = e.target.value.replace(/[^0-9]/g, "").slice(0, 13) } });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ | ระบบรับสมัครนักศึกษาใหม่</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="account-page">
+    <header class="account-top">
+        <div class="container nav">
+            <a class="brand" href="index.html">
+                <div class="logo"><img src="kmutnb.png" alt=""></div>
+                <div><strong>ระบบรับสมัครนักศึกษาใหม่ มจพ.</strong><span>Applicant System</span></div>
+            </a>
+            <a class="btn btn-outline" href="index.html" style="color:var(--blue);border-color:#d6dee9">กลับหน้าหลัก</a>
+        </div>
+    </header>
+    <main class="account-shell">
+        <a class="back-home" href="index.html">← กลับหน้ารับสมัคร</a>
+        <section class="account-card narrow">
+            <div class="account-head">
+                <p class="eyebrow">APPLICANT LOGIN</p>
+                <h1>เข้าสู่ระบบ</h1>
+                <p>เข้าสู่ระบบก่อนสมัครเรียน ตรวจสอบใบสมัคร หรือดูสถานะ</p>
+            </div>
+            <form id="loginForm" class="account-form">
+                <div class="field"><label>เลขบัตรประชาชน *</label><input id="loginCitizenId" type="text" maxlength="13"
+                        inputmode="numeric" pattern="[0-9]{13}" placeholder="เลขบัตรประชาชน 13 หลัก" required></div>
+                <div class="field"><label>รหัสผ่าน *</label><input id="loginPassword" type="password"
+                        placeholder="กรอกรหัสผ่าน" required></div>
+                <div id="loginMessage" class="account-message"></div>
+                <button class="account-submit" type="submit">เข้าสู่ระบบ</button>
+            </form>
+            <div class="account-links">ยังไม่มีบัญชี? <a href="register.html">สร้างบัญชีผู้สมัคร</a></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

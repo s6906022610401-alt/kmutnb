@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ศูนย์ข้อมูลผู้สมัคร | ระบบรับสมัครนักศึกษาใหม่</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-protected="true" class="account-page">
+    <header class="account-top">
+        <div class="container nav">
+            <a class="brand" href="index.html">
+                <div class="logo"><img src="kmutnb.png" alt=""></div>
+                <div><strong>ศูนย์ข้อมูลผู้สมัคร</strong><span>Applicant Center</span></div>
+            </a>
+            <div class="user-chip"><span class="user-avatar">👤</span><span data-user-name>ผู้สมัคร</span><button
+                    class="logout-btn">ออกจากระบบ</button></div>
+        </div>
+    </header>
+    <main class="account-shell">
+        <a class="back-home" href="index.html">← กลับหน้าหลัก</a>
+        <div class="status-banner">
+            <p class="eyebrow">APPLICANT CENTER</p>
+            <h2>สวัสดี <span data-user-name>ผู้สมัคร</span></h2>
+            <p>จัดการใบสมัคร เอกสาร และตรวจสอบสถานะได้จากหน้านี้</p>
+            <div class="notice-strip"><span>🔔</span><b>ศูนย์แจ้งเตือน</b><small
+                    id="dashboardNotice">กำลังตรวจสอบข้อมูลล่าสุดของคุณ...</small></div>
+        </div>
+        <div class="dashboard-grid">
+            <div class="dashboard-card featured-card">
+                <div class="icon">📝</div>
+                <h3>ใบสมัครของฉัน</h3>
+                <p>ดูสิ่งที่คุณสมัครไว้ แก้ไขข้อมูล หรือส่งใบสมัครเพิ่มเติม</p><a href="status.html">ดูรายการสมัคร
+                    →</a><a class="secondary-link" href="home_logged.html#apply">ไปกรอกใบสมัคร →</a>
+            </div>
+            <div class="dashboard-card">
+                <div class="icon">📊</div>
+                <h3>สถานะการสมัคร</h3>
+                <p>ตรวจสอบสถานะใบสมัครและขั้นตอนที่ดำเนินการแล้ว</p><a href="status.html">ตรวจสอบสถานะ →</a>
+            </div>
+            <div class="dashboard-card">
+                <div class="icon">📄</div>
+                <h3>เอกสารประกอบ</h3>
+                <p>ตรวจสอบรายการเอกสารที่ต้องเตรียมและเอกสารที่ส่งแล้ว</p><a href="status.html">ดูเอกสาร →</a>
+            </div>
+            <div class="dashboard-card payment-dashboard-card">
+                <div class="icon">💳</div>
+                <h3>การชำระเงิน</h3>
+                <p>พิมพ์ใบแจ้งชำระ ตรวจสอบสถานะ และพิมพ์หลักฐานหลังชำระเงิน</p><a
+                    href="status.html#payment">จัดการการชำระเงิน →</a>
+            </div>
+            <div class="dashboard-card">
+                <div class="icon">📅</div>
+                <h3>กำหนดการ</h3>
+                <p>ดูวันปิดรับสมัคร วันแก้ไขเอกสาร และวันประกาศผล</p><a href="index.html#dates">ดูกำหนดการ →</a>
+            </div>
+            <div class="dashboard-card">
+                <div class="icon">📢</div>
+                <h3>ประกาศ</h3>
+                <p>อ่านประกาศและคู่มือสำหรับผู้สมัคร</p><a href="index.html#news">ดูประกาศ →</a>
+            </div>
+            <div class="dashboard-card">
+                <div class="icon">🏫</div>
+                <h3>หลักสูตร</h3>
+                <p>ค้นหาคณะ สาขา และวิทยาเขตที่เปิดรับสมัคร</p><a href="index.html#programs">ค้นหาหลักสูตร →</a>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
